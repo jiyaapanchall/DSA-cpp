@@ -13,16 +13,18 @@ int main() {
 
     cout << "Enter elements:\n";
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         cin >> arr[i];
-
-    int answer = 0;
-
-    for(int i = 0; i < n; i++) {
-        answer = answer ^ arr[i];
     }
 
-    cout << "\nThe single number is: " << answer;
+    int singleNumber = 0;
+
+    for (int i = 0; i < n; i++) {
+        singleNumber = singleNumber ^ arr[i];
+    }
+
+    cout << "\nNumber appearing only once = "
+         << singleNumber;
 
     return 0;
 }
